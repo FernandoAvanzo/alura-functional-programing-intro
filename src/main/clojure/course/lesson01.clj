@@ -8,10 +8,10 @@
 (defn minus-ten-percent-of
   "subtract of the value 10% of itselt"
   [value]
-  (- value (ten-percent-of value)))
+  (- value (ten-percent-of value))
 
-;Is a good practice in clojure define declartives names in functions
-(defn ten-percent-of
-  "return 10% value of the paramenter"
-  [value]
-  (* value 0.10))
+  ;Is a good practice in clojure define declartives names in functions
+  (defn ten-percent-of
+    "return 10% value of the paramenter"
+    [value]
+    (* value 0.10)))
