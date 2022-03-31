@@ -1,21 +1,4 @@
-;Function copy paste from the couser
-(defn valor-descontado
-  "Retorna o valor com desconto de 10%."
-  [valor-bruto]
-  (let [desconto (/ 10 100)]
-    (println "Calculando desconto de" desconto)
-    (* valor-bruto (- 1 desconto))
-    )
-  )
-
-;Function copy paste from the couser v2
-(defn valor-descontado
-  "Retorna o valor com desconto de 10%."
-  [valor-bruto]
-  (let [taxa-de-desconto (/ 10 100)
-        desconto (* valor-bruto taxa-de-desconto)]
-    (println "Calculando desconto de" desconto)
-    (- valor-bruto desconto)))
+(ns course.lesson02)
 
 ;Function with if operator version final
 (defn valor-descontado
@@ -27,3 +10,6 @@
       (println "Calculando desconto de" desconto)
       (- valor-bruto desconto))
     valor-bruto))
+
+;to run the file via REPL is necessary declare one point where the function are be called
+(println (valor-descontado 101.99))
