@@ -1,24 +1,18 @@
 (ns course.lesson03)
 
-; PREDICATE
-(defn aplica-desconto?
-  [valor-bruto]
-  (> valor-bruto 100))
+;def symbol that receive  a lambda
+(def mais-caro-que-100? #(> % 100))
 
+;hight order function -> function has a parameter
 (defn valor-descontado
   "Retorna o valor com desconto de 10% se o valor bruto for estritamente maior que 100."
-  [valor-bruto]
-  (if (aplica-desconto? valor-bruto)
+  [aplica? valor-bruto]
+  (if (aplica? valor-bruto)
     (let [taxa-de-desconto (/ 10 100)
           desconto         (* valor-bruto taxa-de-desconto)]
       (- valor-bruto desconto))
     valor-bruto))
 
-;code test section
-(println (aplica-desconto? 1000.00))
-
-(println (aplica-desconto? 100.00))
-
-(println (valor-descontado 1000.00))
-
-(println (valor-descontado 100.00))
+;code test section -> Lambda function or anonymous function
+(println (valor-descontado mais-caro-que-100? 100))
+(println (valor-descontado mais-caro-que-100? 1000))
