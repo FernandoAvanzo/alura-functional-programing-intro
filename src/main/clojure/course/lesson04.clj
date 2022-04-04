@@ -24,10 +24,12 @@
 (println "update array with dec" (update precos 1 dec))
 
 ;my function add 1
-(defn soma-1
+(defn soma-6
   [valor]
   (println "somando um em " valor)
-  (+ valor 1))
+  (+ valor 6))
 
 ;calling my function
-(println "updare arreay" (update precos 0 soma-1))
+(println "updare arreay" (update precos 0 soma-6))
+
+
