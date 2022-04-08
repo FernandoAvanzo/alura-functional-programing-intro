@@ -62,4 +62,34 @@
 ;apply descout in filtered pricing array
 (println "apply desxocut in filtered values" (map valor-descontado (filter aplica-desconto? precos)))
 
+;working with the reduce function
+(println "Original vector" precos)
+(println "Sum value vectors with reduce" (reduce + precos))
+
+;try reduce with my own function
+(defn minha-soma
+  [valor-1 valor-2]
+  (println "somando " valor-1 valor-2)
+  (+ valor-1 valor-2))
+
+;sum vector with reduce and myfunction
+(println "reduce with minha-soma " (reduce minha-soma precos))
+
+;reduce with vector of one element
+(println (reduce minha-soma [15]))
+
+;reduce with start value
+(println (reduce minha-soma 0 precos))
+
+;reduce with range and start value
+(println (reduce minha-soma 0 (range 10)))
+
+;reduce with start value and single array
+(println (reduce minha-soma 0 [15]))
+
+;reduce with start value and empty array
+(println (reduce minha-soma 0 []))
+
+;reduce with only  empty array throws a exceptiomn
+;(println (reduce minha-soma []))
 
