@@ -79,3 +79,15 @@
     :mochila
     :quantidade
     println)
+
+;excercises client map
+(def
+  clientes {
+            :15 {
+                 :nome "Guilherme"
+                 :certificados ["clojure" "java" "Machine Learning"]
+                 }
+            })
+
+;count the number of certificates
+(-> clientes :15 :certificados count)
